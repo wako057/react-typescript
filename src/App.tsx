@@ -1,5 +1,5 @@
 
-import Todos from './components/Todo';
+import Todos from './components/Todos';
 import Todo from './models/todo';
 
 function App() {
@@ -7,14 +7,10 @@ function App() {
     new Todo('Learn React'),
     new Todo('Lean Typescript'),
   ];
+  console.log(todos);
   return (
     <div className="App">
-      <Todos items={todos}>
-        <ul>
-          <li>blublu</li>
-          <li>blibli</li>
-        </ul>
-      </Todos>
+      <Todos items={todos} />
     </div>
   );
 }
