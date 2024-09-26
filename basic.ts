@@ -29,5 +29,7 @@ people = [{ name: 'Greg', age: 44}];
 
 let course1: string = 'React - The complete guide';
 let course2 = 'React - The complete guide';
+// course2 = 42;
 
-course2 = 123;
+let course3: string|number = 'React - The complete guide';
+course3 = 42;
