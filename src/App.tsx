@@ -4,7 +4,12 @@ import Todos from './components/Todo';
 function App() {
   return (
     <div className="App">
-      <Todos />
+      <Todos items={[ 'blabla' ]}>
+        <ul>
+          <li>blublu</li>
+          <li>blibli</li>
+        </ul>
+      </Todos>
     </div>
   );
 }
