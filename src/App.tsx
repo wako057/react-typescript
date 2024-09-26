@@ -15,9 +15,10 @@ function App() {
   // ];
 
   function addTodoHandler (text: string) {
-    const updatedTodos = [...todos, new Todo(text)];
+    // const updatedTodos = [...todos, new Todo(text)];
 
-    setTodos(updatedTodos);
+    // setTodos((prevTodos) => [...prevTodos, new Todo(text)]);
+    setTodos((prevTodos) => prevTodos.concat(new Todo(text)));
   }
   
   return (
