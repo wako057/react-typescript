@@ -2,12 +2,14 @@ import classes from './TodoItem.module.css';
 
 
 interface TodoItemProps {
-    text: string
+    text: string,
+    onRemoveTodo: () => void,
 }
 
-const TodoItem: React.FC<TodoItemProps> = ({text}) => {
+const TodoItem: React.FC<TodoItemProps> = ({text, onRemoveTodo}) => {
+
     return (
-        <li className={classes.item}>{text}</li>
+        <li className={classes.item} onClick={onRemoveTodo}>{text}</li>
     );
 };
 

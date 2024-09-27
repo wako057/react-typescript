@@ -6,16 +6,17 @@ import classes from './Todos.module.css';
 
 interface TodosProps {
     children?: React.ReactNode;
-    items: Todo[]
+    items: Todo[],
+    onRemoveTodo: (id: string) => void
 }
 
-const Todos: React.FC<TodosProps> = ({items, children}) => {
-
+const Todos: React.FC<TodosProps> = ({ items, children, onRemoveTodo }) => {
     return (
         <>
             <ul className={classes.todos}>
-                {items.map(item => 
-                    <TodoItem key={item.text} text={item.text}/>
+                {items.map(item =>
+                    <TodoItem key={item.text} text={item.text} onRemoveTodo={onRemoveTodo.bind(null, item.id)} />
+                    // <TodoItem key={item.text} text={item.text} onRemoveTodo={() => onRemoveTodo(item.id)} /> // ok aussi
                 )}
             </ul>
             {children}
